@@ -1,0 +1,552 @@
+.background {
+    position: relative;
+    background-color: #ec686b;
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    margin-top: 75px;
+    z-index: 0;
+}
+
+.firstcircle {
+    background-color: #FF999A;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 3;
+}
+
+.secondcircle {
+    background-color: #FE8282;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 2;
+}
+
+.thirdcircle {
+    background-color: #FF7578;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+}
+
+.shadow {
+    position: absolute;
+    width: 650px ;
+    height: 25px;
+    background-color: #251F22;
+    top: 73%;
+    left: 50%;
+    transform: translateX(-50% );
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.car {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 4;
+}
+
+.car .carbody {
+    background-color: #ED3F41;
+    width: 530px;
+    height: 220px;
+    border: #251F22 10px solid;
+    border-radius: 110px ;
+    box-shadow: 8px 0px 0 -2px inset white ,
+                0px -20px 0px 0px rgb(0, 0, 0 , 50%) inset;
+}
+
+.car .carbody::before {
+    content: "";
+    position: absolute;
+    background-color: #251F22;
+    width: 300px;
+    height: 20px;
+    border-bottom-left-radius: 14px  12px;
+    border-bottom-right-radius: 14px 12px;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.car .seat1 {
+    position: absolute;
+    background-color: #251F22;
+    width: 130px;
+    height: 30px;
+    top: -25px;
+    left: 30%;
+    transform: translateX(-30%);
+    border-top-left-radius: 14px  12px;
+    border-top-right-radius: 14px 12px;
+}
+
+.car .seat2 {
+    position: absolute;
+    background-color: #251F22;
+    width: 130px;
+    height: 30px;
+    top: -25px;
+    left: 70%;
+    transform: translateX(-70%);
+    border-top-left-radius: 14px  12px;
+    border-top-right-radius: 14px 12px;
+}
+
+.car .stearing {
+    position: absolute;
+    background-color:#251f2200;
+    width: 90px;
+    height: 90px;
+    border: #251F22 8px solid;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    top: -50px;
+    left: 70%;
+    transform: translateX(-74%) rotate(-45deg) ;
+}
+
+.frontwindow {
+    position: absolute;
+    /* background-color: #da9d9d8f ; */
+    width: 360px;
+    height: 100px;
+    top: -117px;
+    left: 50%;
+    border: #251F22 15px solid;
+    border-top-left-radius:  20px;
+    border-top-right-radius: 20px;
+    transform-origin: bottom;
+    transform: translateX(-50%) perspective(10px) rotateX(1deg) ;
+}
+
+.frontwindow::before {
+    position: absolute;
+    content: "";
+    width: 370px;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0);
+    top: 49%;
+    left: 50%;
+    transform: translate(-50% , -50%) perspective(120px) rotateX(1deg);
+    border: 2px white solid;
+    border-top-left-radius:  10px;
+    border-top-right-radius: 10px;
+    border-bottom-color: transparent;
+}
+
+.light1 {
+    position: absolute;
+    background-color: #d4b8b88f;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    clip-path: ellipse(50% 95% at 42% 50%);}
+
+.light2 {
+    position: absolute;
+    background-color: #d4b8b88f;
+    width: 120px;
+    height: 100px;
+    top: 0px;
+    right: 0px;
+    clip-path: ellipse(50% 100% at 86% 43%);
+}
+
+.car .wheel1 {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #383232;
+    width: 95px;
+    height: 150px;
+    bottom: -70px;
+    left: 20px ;
+    border:#251F22 10px solid ;
+    border-radius: 30px;
+    box-shadow: 0px -20px 1px 0px #e6e6e41e inset, 
+                2px -1px 20px 0px #251f22af inset;
+    z-index: -1;
+}
+
+.car .wheel2 {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #383232;
+    width: 95px;
+    height: 150px;
+    bottom: -70px;
+    right: 20px ;
+    border:#251f22 10px solid ;
+    border-radius: 30px;
+    box-shadow: 0px -20px 1px 0px #e6e6e41e inset, 
+                2px -1px 20px 0px #251f22 inset;
+    z-index: -1;
+}
+
+.car .frontlight1 {
+    position: absolute;
+    background-color: #CB3031;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top: 40px;
+    left: 20px ;
+    border: 5px solid #2c2828;
+}
+
+.frontlight1 .light {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: white;
+    width: 85px;
+    height: 80px;
+    border-radius: 50%;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid #2c2828 ;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.37) inset 
+                , 0px 4px 3px 1px rgba(0, 0, 0, 0.562) ;
+}
+
+.car .frontlight2 {
+    position: absolute;
+    background-color: #CB3031;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top: 40px;
+    right: 20px ;
+    border: 5px solid #2c2828;
+}
+
+.frontlight2 .light {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: white;
+    width: 85px;
+    height: 80px;
+    border-radius: 50%;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid #2c2828 ;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.37) inset 
+                , 0px 4px 3px 1px rgba(0, 0, 0, 0.562) ;
+}
+
+.hood {
+    position: absolute;
+    width: 360px;
+    height: 80px;
+    background-color: #ed3f41;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 100px 100px;
+    border-bottom-right-radius: 100px 100px;
+    box-shadow: 0 3px 0 0px white;
+}
+
+.car .headlight1 {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    background-color: #251f22;
+    bottom: 25px ;
+    left: 25px;
+    border-radius: 10px 100px;
+}
+
+.headlight1 .white {
+    position: absolute;
+    width: 180px;
+    height: 55px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 100px;
+    box-shadow: inset 1px -10px 0 0 rgba(0, 0, 0, 0.377);
+}
+
+.headlight1 .black {
+    position: absolute;
+    width: 160px ;
+    height: 30px;
+    background-color:     #251f22d0   ;
+    border-radius: 10px 100px;
+    border-bottom-left-radius: 100px ;
+    /* border-top-right-radius: 50px ; */
+    top: 50%;
+    left: 45%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: inset -4px 17px 0 0 #251F22;
+}
+
+.headlight1 .orange {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #EB9041;
+    top: 50%;
+    left: 20%;
+    border: #251F22 4px solid;
+    border-radius: 10px 100px;
+    border-top-right-radius: 50px ;
+    border-bottom-left-radius: 100px ;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: inset 1px 8px 0 0 #a55f218c;
+    z-index: 1;
+}
+
+.car .headlight2 {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    background-color: #251f22;
+    bottom: 25px ;
+    right: 25px;
+    border-radius: 100px 10px;
+}
+
+.headlight2 .white {
+    position: absolute;
+    width: 180px;
+    height: 55px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px 10px;
+    box-shadow: inset 1px -10px 0 0 rgba(0, 0, 0, 0.377);
+}
+
+.headlight2 .black {
+    position: absolute;
+    width: 160px ;
+    height: 30px;
+    background-color:     #251f22d0   ;
+    border-radius: 100px 10px;
+    border-bottom-right-radius: 100px ;
+    /* border-top-right-radius: 50px ; */
+    top: 50%;
+    left: 55%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: inset -4px 17px 0 0 #251F22;
+}
+
+.headlight2 .orange {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #EB9041;
+    top: 50%;
+    right: -20px;
+    border: #251F22 4px solid;
+    border-radius: 100px 10px;
+    border-top-left-radius: 50px ;
+    border-bottom-right-radius: 100px ;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: inset 1px 8px 0 0 #a55f218c;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 60px 100px;
+    border-bottom-left-radius: 60px 100px;
+    border-top-right-radius: 40px 20px;
+    border-top-left-radius: 40px 20px;
+}
+
+.logo .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px 50px ;
+    border-bottom-right-radius: 50px 50px ;
+    /* border: 1px solid; */
+    left: 50%;
+    top: -9px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.logo .black1 {
+    position: absolute;
+    width: 60px;
+    height: 21px;
+    background-color:#251F22;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 20px 100px;
+    border-bottom-left-radius: 20px 100px;
+    border-top-right-radius: 50px 40px;
+    border-top-left-radius: 50px 40px;
+}
+
+.logo .black1 .circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px 50px ;
+    border-bottom-right-radius: 50px 50px ;
+    /* border: 1px solid; */
+    left: 50%;
+    top: -9px;
+    background-color:#251F22;
+    transform: translateX(-50%);
+}
+
+.logo .black1 .circle .circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px 50px ;
+    border-bottom-right-radius: 50px 50px ;
+    /* border: 1px solid; */
+    left: 50%;
+    top: 5px;
+    background-color:white;
+    transform: translateX(-50%);
+}
+
+.logo .black2 {
+    position: absolute;
+    width: 53px;
+    height: 11px;
+    background-color:#251F22;
+    bottom: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 40px 100px;
+    border-bottom-left-radius: 40px 100px;
+}
+
+.logo .black3 {
+    position: absolute;
+    width: 43px;
+    height: 10px;
+    background-color:#251F22;
+    bottom: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 50px 100px;
+    border-bottom-left-radius: 50px 100px;
+}
+
+.logo .black4 {
+    position: absolute;
+    width: 33px;
+    height: 10px;
+    background-color:#251F22;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 100px 100px;
+    border-bottom-left-radius: 100px 100px;
+}
+
+.sidemirror {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    border: #251F22 solid 4px;
+    top: -10px ;
+    right: 30px;
+    z-index: -1;
+}
+
+.car .line {
+    position: absolute;
+    height: 1500px;
+    width: 5px;
+    background-color: white;
+    top: -1480px;
+    left: 60px;
+    transform-origin: bottom;
+    transform: rotate(10deg) perspective(10px) rotateX(3deg) ;
+    z-index: -1;
+}
+
+.car .circle3 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 55px;
+    z-index: -1;
+}
+
+.mirrorstick {
+    position: absolute;
+    width: 7px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #251F22;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.circle4 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #251F22;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mirror {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: #251F22;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
